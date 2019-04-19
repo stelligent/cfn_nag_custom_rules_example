@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+args = *ARGV
+command = "cfn_nag -r ./lib/rules #{args.join(" ")}"
+system(command)
