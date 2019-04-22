@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
 args = *ARGV
-command = "cfn_nag -r ./lib/rules #{args.join(" ")}"
+path = Gem.loaded_specs['cfn-nag-custom-rules-example'].full_gem_path
+command = "cfn_nag -r #{path}/lib/rules #{args.join(" ")}"
 system(command)
